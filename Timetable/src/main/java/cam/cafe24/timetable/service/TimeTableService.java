@@ -1,5 +1,6 @@
 package cam.cafe24.timetable.service;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -41,7 +42,7 @@ public class TimeTableService {
 		for (int i = 0; i < allList.size(); i++) {
 			search.cartesianProduct(allList.subList(i, allList.size()), new HashMap<String, Object>(), 0, new String[0]);
 		} 
-		System.out.println(search.resultList.size());
+		
 		if(search.resultList.size()>10000) {
 			return search.resultList.subList(0,1);
 		}
